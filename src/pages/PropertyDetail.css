@@ -1,0 +1,265 @@
+/* PropertyDetail.css */
+.property-detail {
+  min-height: 100vh;
+  background: #f5f5f5;
+  padding: 2rem;
+}
+
+.detail-header {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: white;
+  color: #667eea;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.back-link:hover {
+  background: #667eea;
+  color: white;
+  transform: translateX(-5px);
+}
+
+.property-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.property-header-info {
+  padding: 2rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.property-header-info h1 {
+  font-size: 2.5rem;
+  color: #667eea;
+  margin: 0 0 0.5rem 0;
+}
+
+.property-address {
+  font-size: 1.25rem;
+  color: #555;
+  margin: 0 0 1rem 0;
+}
+
+.property-features {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.feature {
+  padding: 0.5rem 1rem;
+  background: #f0f0f0;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.favourite-btn-large {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.favourite-btn-large:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.favourite-btn-large.active {
+  background: #ff6b6b;
+}
+
+/* React Tabs Styling */
+.property-tabs {
+  padding: 2rem;
+}
+
+.react-tabs__tab-list {
+  border-bottom: 2px solid #e0e0e0;
+  margin: 0 0 2rem 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.react-tabs__tab {
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+  list-style: none;
+}
+
+.react-tabs__tab:hover {
+  color: #667eea;
+}
+
+.react-tabs__tab--selected {
+  color: #667eea;
+  border-bottom-color: #667eea;
+  font-weight: 700;
+}
+
+.tab-content {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tab-content h2 {
+  font-size: 1.75rem;
+  color: #333;
+  margin: 0 0 1.5rem 0;
+}
+
+.full-description {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.property-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.detail-item strong {
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.detail-item span {
+  color: #666;
+  font-size: 1rem;
+}
+
+.floor-plan-container {
+  text-align: center;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.floor-plan-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-container {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.property-not-found {
+  max-width: 600px;
+  margin: 4rem auto;
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.property-not-found h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .property-detail {
+    padding: 1rem;
+  }
+
+  .property-header-info {
+    padding: 1.5rem;
+  }
+
+  .property-header-info h1 {
+    font-size: 1.75rem;
+  }
+
+  .property-address {
+    font-size: 1rem;
+  }
+
+  .property-tabs {
+    padding: 1rem;
+  }
+
+  .react-tabs__tab-list {
+    gap: 0.5rem;
+  }
+
+  .react-tabs__tab {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .tab-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .property-details-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .favourite-btn-large {
+    width: 100%;
+    padding: 0.875rem;
+    font-size: 1rem;
+  }
+}
